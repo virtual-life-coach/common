@@ -2,6 +2,7 @@ package vlc.common.to;
 
 import java.io.Serializable;
 
+@Deprecated
 public class EntityTO implements Serializable {
 
     private Integer id;
