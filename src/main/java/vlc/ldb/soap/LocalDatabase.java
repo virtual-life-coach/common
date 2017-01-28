@@ -58,6 +58,21 @@ public interface LocalDatabase {
     /**
      * 
      * @param arg0
+     * @return
+     *     returns vlc.ldb.soap.DoctorTO
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "createDoctor", targetNamespace = "http://soap.ldb.vlc/", className = "vlc.ldb.soap.CreateDoctor")
+    @ResponseWrapper(localName = "createDoctorResponse", targetNamespace = "http://soap.ldb.vlc/", className = "vlc.ldb.soap.CreateDoctorResponse")
+    @Action(input = "http://soap.ldb.vlc/LocalDatabase/createDoctorRequest", output = "http://soap.ldb.vlc/LocalDatabase/createDoctorResponse")
+    public DoctorTO createDoctor(
+        @WebParam(name = "arg0", targetNamespace = "")
+        DoctorTO arg0);
+
+    /**
+     * 
+     * @param arg0
      */
     @WebMethod
     @RequestWrapper(localName = "updateActivity", targetNamespace = "http://soap.ldb.vlc/", className = "vlc.ldb.soap.UpdateActivity")
@@ -156,21 +171,6 @@ public interface LocalDatabase {
     @ResponseWrapper(localName = "listAppointmentsResponse", targetNamespace = "http://soap.ldb.vlc/", className = "vlc.ldb.soap.ListAppointmentsResponse")
     @Action(input = "http://soap.ldb.vlc/LocalDatabase/listAppointmentsRequest", output = "http://soap.ldb.vlc/LocalDatabase/listAppointmentsResponse")
     public List<AppointmentTO> listAppointments();
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns vlc.ldb.soap.DoctorTO
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "createDoctor", targetNamespace = "http://soap.ldb.vlc/", className = "vlc.ldb.soap.CreateDoctor")
-    @ResponseWrapper(localName = "createDoctorResponse", targetNamespace = "http://soap.ldb.vlc/", className = "vlc.ldb.soap.CreateDoctorResponse")
-    @Action(input = "http://soap.ldb.vlc/LocalDatabase/createDoctorRequest", output = "http://soap.ldb.vlc/LocalDatabase/createDoctorResponse")
-    public DoctorTO createDoctor(
-        @WebParam(name = "arg0", targetNamespace = "")
-        DoctorTO arg0);
 
     /**
      * 
@@ -357,6 +357,21 @@ public interface LocalDatabase {
 
     /**
      * 
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "updateUserActivityValue", targetNamespace = "http://soap.ldb.vlc/", className = "vlc.ldb.soap.UpdateUserActivityValue")
+    @ResponseWrapper(localName = "updateUserActivityValueResponse", targetNamespace = "http://soap.ldb.vlc/", className = "vlc.ldb.soap.UpdateUserActivityValueResponse")
+    @Action(input = "http://soap.ldb.vlc/LocalDatabase/updateUserActivityValueRequest", output = "http://soap.ldb.vlc/LocalDatabase/updateUserActivityValueResponse")
+    public void updateUserActivityValue(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Integer arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        Long arg1);
+
+    /**
+     * 
      * @param arg0
      * @return
      *     returns vlc.ldb.soap.UserTO
@@ -420,6 +435,21 @@ public interface LocalDatabase {
     @ResponseWrapper(localName = "listUsersResponse", targetNamespace = "http://soap.ldb.vlc/", className = "vlc.ldb.soap.ListUsersResponse")
     @Action(input = "http://soap.ldb.vlc/LocalDatabase/listUsersRequest", output = "http://soap.ldb.vlc/LocalDatabase/listUsersResponse")
     public List<UserTO> listUsers();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns vlc.ldb.soap.UserTO
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getUserByTelegramId", targetNamespace = "http://soap.ldb.vlc/", className = "vlc.ldb.soap.GetUserByTelegramId")
+    @ResponseWrapper(localName = "getUserByTelegramIdResponse", targetNamespace = "http://soap.ldb.vlc/", className = "vlc.ldb.soap.GetUserByTelegramIdResponse")
+    @Action(input = "http://soap.ldb.vlc/LocalDatabase/getUserByTelegramIdRequest", output = "http://soap.ldb.vlc/LocalDatabase/getUserByTelegramIdResponse")
+    public UserTO getUserByTelegramId(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Integer arg0);
 
     /**
      * 

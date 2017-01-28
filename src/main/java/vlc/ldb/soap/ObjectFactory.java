@@ -25,7 +25,9 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _DeleteMeasurement_QNAME = new QName("http://soap.ldb.vlc/", "deleteMeasurement");
+    private final static QName _UpdateUserActivityValueResponse_QNAME = new QName("http://soap.ldb.vlc/", "updateUserActivityValueResponse");
     private final static QName _ReadMeasurement_QNAME = new QName("http://soap.ldb.vlc/", "readMeasurement");
+    private final static QName _GetUserByTelegramIdResponse_QNAME = new QName("http://soap.ldb.vlc/", "getUserByTelegramIdResponse");
     private final static QName _DeleteUserActivity_QNAME = new QName("http://soap.ldb.vlc/", "deleteUserActivity");
     private final static QName _UpdateDoctorResponse_QNAME = new QName("http://soap.ldb.vlc/", "updateDoctorResponse");
     private final static QName _ReadAppointmentResponse_QNAME = new QName("http://soap.ldb.vlc/", "readAppointmentResponse");
@@ -37,6 +39,7 @@ public class ObjectFactory {
     private final static QName _ReadDoctorResponse_QNAME = new QName("http://soap.ldb.vlc/", "readDoctorResponse");
     private final static QName _CreateUserActivity_QNAME = new QName("http://soap.ldb.vlc/", "createUserActivity");
     private final static QName _ListUserActivitiesResponse_QNAME = new QName("http://soap.ldb.vlc/", "listUserActivitiesResponse");
+    private final static QName _UpdateUserActivityValue_QNAME = new QName("http://soap.ldb.vlc/", "updateUserActivityValue");
     private final static QName _ReadUser_QNAME = new QName("http://soap.ldb.vlc/", "readUser");
     private final static QName _ReadActivityResponse_QNAME = new QName("http://soap.ldb.vlc/", "readActivityResponse");
     private final static QName _ListMeasurements_QNAME = new QName("http://soap.ldb.vlc/", "listMeasurements");
@@ -57,6 +60,7 @@ public class ObjectFactory {
     private final static QName _ResetDBResponse_QNAME = new QName("http://soap.ldb.vlc/", "resetDBResponse");
     private final static QName _ListActivitiesResponse_QNAME = new QName("http://soap.ldb.vlc/", "listActivitiesResponse");
     private final static QName _CreateActivity_QNAME = new QName("http://soap.ldb.vlc/", "createActivity");
+    private final static QName _GetUserByTelegramId_QNAME = new QName("http://soap.ldb.vlc/", "getUserByTelegramId");
     private final static QName _UserActivityTO_QNAME = new QName("http://soap.ldb.vlc/", "userActivityTO");
     private final static QName _CreateDoctorResponse_QNAME = new QName("http://soap.ldb.vlc/", "createDoctorResponse");
     private final static QName _DeleteDoctor_QNAME = new QName("http://soap.ldb.vlc/", "deleteDoctor");
@@ -445,6 +449,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link UpdateUserActivityValue }
+     * 
+     */
+    public UpdateUserActivityValue createUpdateUserActivityValue() {
+        return new UpdateUserActivityValue();
+    }
+
+    /**
      * Create an instance of {@link CreateUserActivity }
      * 
      */
@@ -461,6 +473,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetUserByTelegramIdResponse }
+     * 
+     */
+    public GetUserByTelegramIdResponse createGetUserByTelegramIdResponse() {
+        return new GetUserByTelegramIdResponse();
+    }
+
+    /**
      * Create an instance of {@link ReadMeasurement }
      * 
      */
@@ -474,6 +494,14 @@ public class ObjectFactory {
      */
     public DeleteMeasurement createDeleteMeasurement() {
         return new DeleteMeasurement();
+    }
+
+    /**
+     * Create an instance of {@link UpdateUserActivityValueResponse }
+     * 
+     */
+    public UpdateUserActivityValueResponse createUpdateUserActivityValueResponse() {
+        return new UpdateUserActivityValueResponse();
     }
 
     /**
@@ -506,6 +534,14 @@ public class ObjectFactory {
      */
     public CreateActivity createCreateActivity() {
         return new CreateActivity();
+    }
+
+    /**
+     * Create an instance of {@link GetUserByTelegramId }
+     * 
+     */
+    public GetUserByTelegramId createGetUserByTelegramId() {
+        return new GetUserByTelegramId();
     }
 
     /**
@@ -654,12 +690,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateUserActivityValueResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.ldb.vlc/", name = "updateUserActivityValueResponse")
+    public JAXBElement<UpdateUserActivityValueResponse> createUpdateUserActivityValueResponse(UpdateUserActivityValueResponse value) {
+        return new JAXBElement<UpdateUserActivityValueResponse>(_UpdateUserActivityValueResponse_QNAME, UpdateUserActivityValueResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ReadMeasurement }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://soap.ldb.vlc/", name = "readMeasurement")
     public JAXBElement<ReadMeasurement> createReadMeasurement(ReadMeasurement value) {
         return new JAXBElement<ReadMeasurement>(_ReadMeasurement_QNAME, ReadMeasurement.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetUserByTelegramIdResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.ldb.vlc/", name = "getUserByTelegramIdResponse")
+    public JAXBElement<GetUserByTelegramIdResponse> createGetUserByTelegramIdResponse(GetUserByTelegramIdResponse value) {
+        return new JAXBElement<GetUserByTelegramIdResponse>(_GetUserByTelegramIdResponse_QNAME, GetUserByTelegramIdResponse.class, null, value);
     }
 
     /**
@@ -759,6 +813,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://soap.ldb.vlc/", name = "listUserActivitiesResponse")
     public JAXBElement<ListUserActivitiesResponse> createListUserActivitiesResponse(ListUserActivitiesResponse value) {
         return new JAXBElement<ListUserActivitiesResponse>(_ListUserActivitiesResponse_QNAME, ListUserActivitiesResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateUserActivityValue }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.ldb.vlc/", name = "updateUserActivityValue")
+    public JAXBElement<UpdateUserActivityValue> createUpdateUserActivityValue(UpdateUserActivityValue value) {
+        return new JAXBElement<UpdateUserActivityValue>(_UpdateUserActivityValue_QNAME, UpdateUserActivityValue.class, null, value);
     }
 
     /**
@@ -939,6 +1002,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://soap.ldb.vlc/", name = "createActivity")
     public JAXBElement<CreateActivity> createCreateActivity(CreateActivity value) {
         return new JAXBElement<CreateActivity>(_CreateActivity_QNAME, CreateActivity.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetUserByTelegramId }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://soap.ldb.vlc/", name = "getUserByTelegramId")
+    public JAXBElement<GetUserByTelegramId> createGetUserByTelegramId(GetUserByTelegramId value) {
+        return new JAXBElement<GetUserByTelegramId>(_GetUserByTelegramId_QNAME, GetUserByTelegramId.class, null, value);
     }
 
     /**
