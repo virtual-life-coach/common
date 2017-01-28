@@ -1,4 +1,4 @@
-package to;
+package vlc.common.to;
 
 import java.io.Serializable;
 
