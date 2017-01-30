@@ -28,3 +28,95 @@ The project repository is made up of the following *files* and **folders**:
 * *pom.xml*: Maven project descriptor
 * *README.md*: this file
 * *report.pdf*: project final report
+
+
+## JSON template
+
+**Activity**
+```
+{
+   "id":0,
+   "description":"description"
+}
+```
+
+**Appointment**
+```
+{
+   "id":0,
+   "userId":0,
+   "doctorId":0,
+   "date":"date",
+   "location":"location"
+}
+```
+
+**Doctor**
+```
+{
+   "id":0,
+   "name":"name",
+   "surname":"surname",
+   "birthday":"birthday",
+   "telegramId":"telegramId"
+}
+```
+
+**Measurement**
+```
+{
+   "id":0,
+   "userId":0,
+   "type":"type",
+   "date":"date",
+   "value":0.0
+}
+```
+
+**Quote**
+```
+{
+   "quote":"quote"
+}
+```
+
+**Receipt**
+```
+{
+   "id":0,
+   "text":"text"
+}
+```
+
+**TelegramMessage**
+```
+{
+   "chat_id":"chat_id",
+   "message":"message"
+}
+```
+
+**User**
+```
+{
+   "id":0,
+   "name":"name",
+   "surname":"surnname",
+   "birthday":"birthday",
+   "telegramId":"telegramId"
+}
+```
+
+**UserActivity**
+```
+{
+   "id":0,
+   "activityId":0,
+   "userId":0,
+   "details":"details",
+   "targetValue":0,
+   "currentValue":0,
+   "deadlineDate":"deadlineDate",
+   "completed":false
+}
+```
