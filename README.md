@@ -32,6 +32,8 @@ The project repository is made up of the following *files* and **folders**:
 
 ## JSON template
 
+The following are example of valid objects that can be exchanged with the application via API calls.
+
 **Activity**
 ```
 {
